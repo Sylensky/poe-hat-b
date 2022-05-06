@@ -1,27 +1,25 @@
 
 # Basic information:
-This Demo has been verified on the Raspberry Pi 3B+ and Jetson Nano.
-This Demo has been verified using the e-paper Driver HAT module. 
-You can view the corresponding test routines in the examples\ of the project.
+```
+POE Hat (B) for the Raspberry PI from WaveShare has been tested on Debian Bullseye. 
+```
+The original sources belong to Waveshare which can be obtained under this link: https://www.waveshare.com/wiki/PoE_HAT_(B)
 
-## Installaing libraries
-    sudo apt-get update
-    sudo apt-get install python-pip
-    sudo apt-get install python-pil
-    sudo pip install RPi.GPIO
-    sudo pip install smbus
+This fork fixes some mismatching behaviours like the following:
 
-or
+- fixed cut IP address
+- changed second line position to avoid flickering
+- fan cools the PI 10 Degrees lower
 
-    sudo apt-get update
-    sudo apt-get install python3-pip
-    sudo apt-get install python3-pil
-    sudo pip3 install RPi.GPIO
-    sudo pip3 install smbus
+
+## Installing as systemd service:
+
+    chmod +x install.sh
+    ./install.sh
 
 ## Basic usage:
+Test the program in the **examples** directory:
 
-Test the program in the examples\ directory:
 python2
 
     sudo python main.py
