@@ -1,0 +1,10 @@
+[Unit]
+Description=Waveshare Poe Hat B
+After=network.target
+[Service]
+Environment=systemd=true
+ExecStart=${PYTHON} ${HOME}/poe-hat-b/main.py
+Restart=always
+RestartSec=30
+[Install]
+WantedBy=multi-user.target
