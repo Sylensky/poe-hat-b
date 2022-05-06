@@ -3,7 +3,7 @@ Description=Waveshare Poe Hat B
 After=network.target
 [Service]
 Environment=systemd=true
-ExecStart=${PYTHON} ${HOME}/poe-hat-b/main.py
+ExecStart=python3 home/pi/poe-hat-b/main.py
 Restart=always
 RestartSec=30
 [Install]
