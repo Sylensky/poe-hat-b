@@ -55,7 +55,7 @@ class POE_HAT_B:
         ip = self.GET_IP()
         temp = self.GET_Temp()
         draw.text((0,1), 'eth0: '+ str(ip), font = font, fill = 0)
-        draw.text((0,16), 'Temp: '+ str(((int)(temp*10))/10.0), font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
+        draw.text((0,18), 'Temp: '+ str(((int)(temp*10))/10.0), font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
         if(temp>=FAN_TEMP):
             self.FAN_MODE = 1
             
@@ -63,10 +63,10 @@ class POE_HAT_B:
             self.FAN_MODE = 0
         
         if(self.FAN_MODE == 1):
-            draw.text((77,16), 'FAN:ON', font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
+            draw.text((77,18), 'FAN:ON', font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
             self.FAN_ON()
         else:
-            draw.text((77,16), 'FAN:OFF', font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
+            draw.text((77,18), 'FAN:OFF', font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
             self.FAN_OFF()
         show.ShowImage(show.getbuffer(image1))
 
