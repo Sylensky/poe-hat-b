@@ -55,7 +55,7 @@ class POE_HAT_B:
         ip = self.GET_IP()
         temp = self.GET_Temp()
         draw.text((0,1), 'Eth: '+ str(ip), font = font, fill = 0)
-        draw.text((0,22), 'Tmp: '+ str(((int)(temp*10))/10.0) + ' CPU: ' + str((int)((os.getloadavg()[0]/os.cpu_count())*100)) + '%', font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
+        draw.text((0,20), 'CPU: '+ str((int)((os.getloadavg()[0]/os.cpu_count())*1000)/10) + '% ' + str(((int)(temp*10))/10.0) + '°C', font = ImageFont.truetype(dir_path+'/Courier_New.ttf',12), fill = 0)
         if(temp>=FAN_TEMP):
             self.FAN_MODE = 1
             
