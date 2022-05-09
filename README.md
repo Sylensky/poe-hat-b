@@ -10,6 +10,8 @@ This fork fixes some mismatching behaviours like the following:
 - fixed cut IP address
 - changed second line position to avoid flickering
 - fan cools the PI 10 Degrees lower
+- removed Fan on/off indication because it is useless
+- added system usage in percent
 
 
 ## Installing as systemd service:
