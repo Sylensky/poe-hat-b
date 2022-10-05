@@ -27,7 +27,7 @@
 # THE SOFTWARE.
 #
 
-from smbus import SMBus
+from smbus2 import SMBus
 import time
 import numpy as np
 
