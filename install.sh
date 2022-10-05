@@ -10,9 +10,8 @@ IS_I2C=`sudo raspi-config nonint get_i2c`
 [ $IS_I2C -ne 0 ]&&sudo raspi-config nonint do_i2c 0
 # install required packages
 sudo apt update
-sudo apt install -y python3-pip python3-pil libatlas-base-dev
-sudo pip3 install RPi.GPIO smbus numpy
-
+sudo apt install -y python3-pip python3-pil python3-smbus libatlas-base-dev
+pip install .
 
 sudo cp service/poe-hat.service /etc/systemd/system
 sudo systemctl daemon-reload
