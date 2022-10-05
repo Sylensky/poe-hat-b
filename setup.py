@@ -15,9 +15,9 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     scripts=["main.py"],
-    packages=["waveshare_POE_HAT_B"],
+    packages=["poe_hat_b"],
     package_data={
-        "waveshare_POE_HAT_B": [
+        "poe_hat_b": [
             "POE_HAT_B.py",
             "SSD1306.py",
             "*.ttf",

@@ -8,7 +8,7 @@ if os.path.exists(libdir):
 
 import logging
 
-from waveshare_POE_HAT_B import POE_HAT_B
+from poe_hat_b import POE_HAT_B
 
  
 logging.basicConfig(level=logging.INFO)
